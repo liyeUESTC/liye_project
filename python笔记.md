@@ -50,7 +50,7 @@ x = np.mgird[-1:1:complex(0,n)]
 - list定义利用'[]'，tuple定义利用'()'
 
 
-###pca类的理解
+### pca类的理解
 - pca类有parameters和attributes，调用pca类的attributes时不需要加参数，例：pca.components_.reshape ，但在调用pca类中的其他函数时需要加参数，例：pca.fit(X)。根据需求制定。
 
 
