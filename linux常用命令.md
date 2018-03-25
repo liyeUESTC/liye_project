@@ -26,12 +26,15 @@
 - identify  001.jpg  查看照片尺寸信息
 - chmod 777 test   更改文件权限
 - chmod -R 777 /home/liye/whitebalance  更改whitebalance文件夹下所有文件的权限
+- ctrl + a 光标移动到行首
+- ctrl + a 光标移动到行尾
 
 ****
 
 - free -h    查看内存信息
 - sudo fdisk -l 查看硬盘情况
 - df -l 查看硬盘挂在情况
+- nvidia-smi 查看显卡使用情况
 
 
 ****
