@@ -172,3 +172,6 @@ INPUT -> [[CONV -> RELU]*N -> POOL]*M -> [FC -> RELU]*K -> FC
 
 
 
+
+
+
