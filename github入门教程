@@ -1,0 +1,11 @@
+（1）打开git-bash
+（2）cd到已经创建好的目标仓库，例如"cd D:",切换到D盘目录
+（3）git init
+（4）git add function.png
+（5）git commit -m "function.png提交"
+（6）git status
+（7）打开github网页版，创建仓库“gittest”
+（8）git remote add origin https://github.com/liyeUESTC/gittest.git  #重新创建仓库时使用
+（9）git push  # 同步function.pn
+
+创建文件夹：
