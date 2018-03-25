@@ -25,6 +25,7 @@
   
 ## 2 卷积神经网络
 （1）避免了对图像的复杂前期处理，可以直接输入为原始图像
+
 （2）深度学习可以将网络的某一输出层当作是数据的另一种表达，从而可以将其认为是神经网络学习到的特征。利用这一特征，可以进一步进行相似度的判断。 
 ### 2.1 局部感知
 #### **降低参数数量----局部感受野**
@@ -132,7 +133,7 @@ Fig. 4. 左：局部连接神经网络。右：卷积网络。
 ![这里写图片描述](http://img.blog.csdn.net/20171106155243682?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGl5ZTkzMTEyNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ![这里写图片描述](http://img.blog.csdn.net/20171106155033376?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGl5ZTkzMTEyNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-###3.4 全连接层
+### 3.4 全连接层
 - 分类器作用：卷积层、池化层以及激活函数等操作是将原始数据映射到隐层特征空间的话，全连接层则起到将学到的“分布式特征表示”映射到样本标记空间的作用。
 - 参数冗余：全连接层参数可占整个网络参数80%左右，ResNet和GoogLeNet等均用全局平均池化（global average pooling，GAP）取代FC来融合学到的深度特征。
 
@@ -140,10 +141,10 @@ Fig. 4. 左：局部连接神经网络。右：卷积网络。
 
 ## 4 卷积神经网络的结构总结
 
-###4.1 层的排列规律
+### 4.1 层的排列规律
 INPUT -> [[CONV -> RELU]*N -> POOL]*M -> [FC -> RELU]*K -> FC
 
-###4.2 卷积选取
+### 4.2 卷积选取
 - 几个小的滤波器卷积层的组合比一个大滤波器卷积层好。
 3个3 * 3卷积层感受野等同于1个7 * 7 卷积层感受野。
 （1）特征提取准确
@@ -154,7 +155,7 @@ INPUT -> [[CONV -> RELU]*N -> POOL]*M -> [FC -> RELU]*K -> FC
 - 如果必须使用更大的滤波器尺寸（比如7x7之类），通常只用在第一个面对原始图像的卷积层上。
 
 
-###4.3 层的尺寸设置规律
+### 4.3 层的尺寸设置规律
 
 **输入层**：常用数字包括32（比如CIFAR-10），64，96（比如STL-10）或224（比如ImageNet卷积神经网络），384和512。
 
