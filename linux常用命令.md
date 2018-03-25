@@ -1,6 +1,8 @@
 
 # linux常用命令
 
+****
+
 ## 命令
 - sz 下载文件  e.g. sz  6.rar
 - rz 上传文件 
@@ -24,6 +26,7 @@
 - identify  001.jpg  查看照片尺寸信息
 - chmod 777 test   更改文件权限
 - chmod -R 777 /home/liye/whitebalance  更改whitebalance文件夹下所有文件的权限
+
 ****
 
 - free -h    查看内存信息
@@ -51,15 +54,15 @@
 
 ****
 
-##快捷键
+## 快捷键
 - ctrl+z  暂停
 - ctrl+c  or  ctrl+d  退出
 
-## python
+## 运行python
 
 
 
-## C++
+## 运行C++
 g++ whitebalance.c $(pkg-config opencv --libs --cflags)
 指定头文件所在的目录去查找需要的配置文件
 
