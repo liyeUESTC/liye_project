@@ -15,19 +15,21 @@
 - mkdir  创建文件夹
 - eog  查看照片
 - xdg-open .   查看该目录中的所有照片
-- echo  ￥DISPLAY  检测Xming是否配置成功或打开
 - mv  wenjian  ziliao  修改文件名
 - pwd 查看当前目录
 - du -hs *  查看当前目录下的各文件大小
 - ./data/mnist/get_mnist.sh  运行".sh"文件
 - ls | wc -l     计算当前目录下文件数量
 - cp -r /home/liye/    ~/
--  cp /home/hzl/cifar-10-batches-bin/* ./  copy文件中的所有文件到当前目录
+- cp /home/hzl/cifar-10-batches-bin/* ./  copy文件中的所有文件到当前目录
 - identify  001.jpg  查看照片尺寸信息
 - chmod 777 test   更改文件权限
 - chmod -R 777 /home/liye/whitebalance  更改whitebalance文件夹下所有文件的权限
 - ctrl + a 光标移动到行首
-- ctrl + a 光标移动到行尾
+- ctrl + e 光标移动到行尾
+- export DISPLAY=192.168.3.109:0.0   配置远程显示端口，192.168.3.109是本机ip地址
+- echo  ￥DISPLAY  检测Xming是否配置成功或打开
+- echo $PATH    查看环境变量覆盖的路径
 
 ****
 
@@ -35,6 +37,7 @@
 - sudo fdisk -l 查看硬盘情况
 - df -l 查看硬盘挂在情况
 - nvidia-smi 查看显卡使用情况
+- nmon  查看CPU、内存使用信息   “q”退出
 
 
 ****
