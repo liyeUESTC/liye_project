@@ -37,7 +37,7 @@ env 查看环境变量
 - ldd “可执行文件”   查看该可执行文件的环境依赖
 
 
-ln -s /usr/local/cuda-8.0 cuda   建立软链接
+- ln -s /usr/local/cuda-8.0 cuda   建立软链接
 
 
 - find . -name '文件'     查找当前目录有无该文件
