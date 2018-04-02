@@ -30,6 +30,7 @@
 - export DISPLAY=192.168.3.109:0.0   配置远程显示端口，192.168.3.109是本机ip地址
 - echo  ￥DISPLAY  检测Xming是否配置成功或打开
 - echo $PATH    查看环境变量覆盖的路径
+- kill -9 "PID"  终止进程并释放内存
 
 ****
 
