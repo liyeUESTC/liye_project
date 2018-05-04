@@ -42,7 +42,7 @@ GLOG_log_dir="./LOG_TRAIN"
 
 - c3d_resnet18_ucf101_r2_ft_iter_20000.caffemodel：训练好的网络权值
 
---stage='test-on-val'：在验证集上进行测试，网络结构中会定义在验证集上测试的layer和在训练集上测试的layer。
+- stage='test-on-val'：在验证集上进行测试，网络结构中会定义在验证集上测试的layer和在训练集上测试的layer。
 
 GLOG_logtostderr=1 
 
