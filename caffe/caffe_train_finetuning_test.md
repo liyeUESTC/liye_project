@@ -6,7 +6,9 @@
 
 - c3d_resnet18_sports1m_r2_iter_2800000.caffemodel：训练好的网络权值
 
-GLOG_log_dir="./LOG_TRAIN" 
+makdir -p LOG_TRAIN   # 创建日志文件夹
+
+GLOG_log_dir="./LOG_TRAIN"   #caffe提供了保存训练日志以及解析训练和测试数据的功能，该步骤为保存训练日志
 
 ../../build/tools/caffe.bin train 
 
