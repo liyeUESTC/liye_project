@@ -1,8 +1,10 @@
-**在加装新硬盘时，首先要分区、格式化，挂载，以下将分布介绍**
 
+**在加装新硬盘时，首先要分区、格式化，挂载，以下将分布介绍**
+```
 sudo fdisk -l  # 查看硬盘情况，包括固态硬盘和机械硬盘
 
 df -h # 查看硬盘挂载情况
+
 
 **硬盘按识别顺序分别命名为sda、sdb......，没有固定特称**
 
@@ -15,15 +17,17 @@ df -h # 查看硬盘挂载情况
 - 分区
 
 ```
+
+
 fdisk /dev/sda
 Command (m for help): n
 Command action
 e extended
 p primary partition (1-4)
 输入：e
-Partition number (1-4): 1
-First cylinder (1-9729, default 1):回车
-Last cylinder or +size or +sizeM or +sizeK (1-9729, default 9729):回车
+Partition number (1-4): 1    # 分几个区，1：代表只分一个区
+First cylinder (1-9729, default 1):回车   # 默认从1开始
+Last cylinder or +size or +sizeM or +sizeK (1-9729, default 9729):回车    # 默认选择到最后
 Command (m for help):w(保存退出)
 ```
 
