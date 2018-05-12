@@ -2,9 +2,8 @@
 **在加装新硬盘时，首先要分区、格式化，挂载，以下将分布介绍**
 ```
 sudo fdisk -l  # 查看硬盘情况，包括固态硬盘和机械硬盘
-
 df -h # 查看硬盘挂载情况
-
+```
 
 **硬盘按识别顺序分别命名为sda、sdb......，没有固定特称**
 
@@ -17,9 +16,7 @@ df -h # 查看硬盘挂载情况
 - 分区
 
 ```
-
-
-fdisk /dev/sda
+fdisk /dev/sda   # 对sda进行分区，sda代表需要挂在的硬盘
 Command (m for help): n
 Command action
 e extended
@@ -34,7 +31,7 @@ Command (m for help):w(保存退出)
 - 格式化
 
 ```
-fdisk -l
+fdisk -l   # 查看刚刚分区硬盘的名称，以便进行下方的初始化
 mkfs -t ext3 /dev/sda1  # 对sda1进行格式化
 Writing superblocks and filesystem accounting information:直接回车。
 ```
