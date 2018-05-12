@@ -42,6 +42,6 @@ Writing superblocks and filesystem accounting information:直接回车。
 mkdir /www  # 创建www的文件夹
 mount /dev/sda1  /www/  # 将sda1挂载到www文件夹下
 vim /etc/fstab 
-在文件中输入'dev/sda1 /www ext3 defaults 0 0'
+在文件中输入'dev/sda1 /www ext3 defaults 0 0'   # ext3代表数据格式
 ```
 
