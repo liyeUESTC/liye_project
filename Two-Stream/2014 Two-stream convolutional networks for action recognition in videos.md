@@ -12,7 +12,7 @@
 
 ### Two-stream architecture for video recognition
 
-![image](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180520233723.png)
+![Two-stream architecture](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180520233723.png)
 
 - The spatial part: individual frame, carrier information about scenes and objects depicted in the video
 
