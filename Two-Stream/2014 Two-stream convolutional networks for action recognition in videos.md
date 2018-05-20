@@ -8,4 +8,23 @@
 融合，可以采用平均法或者SVM。
 ```
 
-### 
+### Introduction
+
+### Two-stream architecture for video recognition
+
+
+
+- The spatial part: individual frame, carrier information about scenes and objects depicted in the video
+
+- The temporal part: multi-frame, conveys the movement of the observer(the camera) and the objects
+
+- late fusion(融合)： averaging or multi-class linear SVM(以softmax输出作为feature)
+
+
+
+
+
+### Optical flow ConvNets
+
+
+
