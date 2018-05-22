@@ -9,7 +9,7 @@
 ```
 
 ### Introduction
-
+                   
 ### Two-stream architecture for video recognition
 
 ![ Two-stream architecture ](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180520233723.png)
@@ -25,6 +25,78 @@
 
 
 ### Optical flow ConvNets
+
+
+
+### Mutil-tast learning
+
+
+### Implementation details
+
+- ConvNets configuration
+(参考Two-Stream architecture图)
+为了减少显存消耗，temporal ConvNet 比 spatial ConvNet 少了第二个BN层。
+其他卷积网络配置参照Two-Stream架构图
+
+- Training
+
+（1）spatial net training: videos -> frames(256) -> sub-image(224 * 224, 并非从中间裁剪，而是随机裁剪)  -> flipping and RGB jittering
+
+（2）temporal net training: 
+
+（3）learning rate 设置， batchsize为256
+
+- Testing
+
+（1）在一个video里面，等间隔挑选25帧作为测试样本
+
+（2）每一帧通过cropping和flipping可以得到10个卷积输入
+
+（3）平均score作为整个video的score
+
+- Pre-training on ImageNet ILSVRC-2012
+
+由于裁剪采用随机方式，并非从中央裁剪（256 -> 224）,在ILSVRC-2012验证集上，top-5错误率由16%降低到了13.5%
+
+- Mutil-GPU training
+
+
+- Optical flow
+
+（1）training之前计算好了flow
+
+（2）flow rescale to a [0,255] range, and compressed using JPEG, then rescale the flow back to its original range
+
+(3) the flow size of the ucf101 dataset reduce from 1.5TB to 27GB
+
+### Evaluation
+
+- Datasets and evaluation protocol
+
+（1）UCF-101 和 HMDB-51 数据集介绍
+（2）数据集划分
+
+- Spatial ConvNets
+
+![spatial and temporal](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180522212019.png)
+
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
