@@ -74,15 +74,30 @@
 - Datasets and evaluation protocol
 
 （1）UCF-101 和 HMDB-51 数据集介绍
+
 （2）数据集划分
 
 - Spatial ConvNets
 
 ![spatial and temporal](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180522212019.png)
 
+(1) training from scratch on UCF-101 (从头开始训练)
+
+（2）pre-training on ILSVRC-2012 followed by fine-turning on UCF-101 (在ucf101上finetuning所有参数)
+
+(3)keep the pre-trained network fixed and only training the last(classification) layer  （在ucf101上finetuning最后一层参数）
+
+- Temporal ConvNets
+
+(1) 随着L的增大，准确率提升，同时加入“Mean subtraction”有助于提升准确率。
+
+（2）Finally we note that temporal ConvNets significantly outperform the spatial ConvNets, 
+
+Which confirms the importance of motion information for action recognition.
+
+- Multi-tast learning of temporal ConvNets
+
 (1)
-
-
 
 
 
