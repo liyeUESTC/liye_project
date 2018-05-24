@@ -26,10 +26,20 @@
 
 ### Optical flow ConvNets
 
+（1）传统定义的光流:displacement----dt(u,v)表示t时刻对应帧上的点（u,v）到t+1时刻点（u,v）的方向向量
+
+（2）第0帧到接下来的L帧，共有L+1帧，相邻两帧之间求光流，可以得到L帧光流图，每点的光流是二维的，分X轴和Y轴
+
+设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
 
 
-### Mutil-tast learning
+### Multi-tast learning
 
+faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分两个任务。
+
+（1）CNN的最后一层连到多个softmax的层上，对应不同的数据集，这样就可以在多个数据集上进行multi-task learning
+
+（2）增大数据集可以降低过拟合。To decrease over-fitting, one could consider combining the two datasets into one.
 
 ### Implementation details
 
@@ -75,7 +85,9 @@
 
 （1）UCF-101 和 HMDB-51 数据集介绍
 
-（2）数据集划分
+（2）数据集划分,UCF101和HMDB-51的训练集和测试集分别被分为了3份（three splits）。
+
+有些测试是在split1上进行的，有些是在3个split上进行，然后准确率求平均。
 
 - Spatial ConvNets
 
@@ -98,6 +110,7 @@ Which confirms the importance of motion information for action recognition.
 - Multi-tast learning of temporal ConvNets
 
 (1)
+
 
 
 
