@@ -35,6 +35,9 @@
 
 ### Multi-tast learning
 
+![多任务与单任务的区别](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180523221227.png)
+
+
 faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分两个任务。
 
 （1）CNN的最后一层连到多个softmax的层上，对应不同的数据集，这样就可以在多个数据集上进行multi-task learning
@@ -108,6 +111,9 @@ faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分�
 Which confirms the importance of motion information for action recognition.
 
 - Multi-tast learning of temporal ConvNets
+
+![Training setting & accuracy](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180523222621.png)
+
 
 (1)
 
