@@ -8,9 +8,9 @@
 融合，可以采用平均法或者SVM。
 ```
 
-### Introduction
+### 1 Introduction
                    
-### Two-stream architecture for video recognition
+### 2 Two-stream architecture for video recognition
 
 ![ Two-stream architecture ](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180520233723.png)
 
@@ -24,7 +24,7 @@
 
 
 
-### Optical flow ConvNets
+### 3 Optical flow ConvNets
 
 （1）传统定义的光流:displacement----dt(u,v)表示t时刻对应帧上的点（u,v）到t+1时刻点（u,v）的方向向量
 
@@ -33,7 +33,7 @@
 设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
 
 
-### Multi-tast learning
+### 4 Multi-tast learning
 
 ![多任务与单任务的区别](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180523221227.png)
 
@@ -44,7 +44,7 @@ faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分�
 
 （2）增大数据集可以降低过拟合。To decrease over-fitting, one could consider combining the two datasets into one.
 
-### Implementation details
+### 5 Implementation details
 
 - ConvNets configuration
 (参考Two-Stream architecture图)
@@ -82,13 +82,17 @@ faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分�
 
 (3) the flow size of the ucf101 dataset reduce from 1.5TB to 27GB
 
-### Evaluation
+### 6 Evaluation
 
 - Datasets and evaluation protocol
 
 （1）UCF-101 和 HMDB-51 数据集介绍
 
-（2）数据集划分,UCF101和HMDB-51的训练集和测试集分别被分为了3份（three splits）。
+（2）数据集划分,UCF101和HMDB-51的训练集和测试集分别被整理者划分了三次（three splits），每次的划分准则不同。
+
+Basically the uccf-101 dataset is split into train and test data three times.
+
+（ucf提供了三种训练/测试数据划分方案）
 
 有些测试是在split1上进行的，有些是在3个split上进行，然后准确率求平均。
 
