@@ -97,24 +97,29 @@
 
 - spatial net training: videos -> frames(256) -> sub-image(224 * 224, 并非从中间裁剪，而是随机裁剪)   -> flipping and RGB jittering
 
+（flipping、cropping和RGB jittering是数据增强的方式）
+
 - temporal net training: 
 
 - learning rate 设置， batchsize为256
 
 （3）Testing
 
-- 在一个video里面，等间隔挑选25帧作为测试样本
+- 在一个video里面，等间隔挑选25帧作为测试样本,一段视频，选择25个样本
 
-- 每一帧通过cropping和flipping可以得到10个卷积输入
+- 每一帧通过cropping和flipping可以得到10个卷积输入（cropping和flippinh是数据增强的方式）
 
-- 平均score作为整个video的score
+- 平均25个样本的10个输入（一共250个输入）的score，作为整个video的score
 
 （4）Pre-training on ImageNet ILSVRC-2012
 
-由于裁剪采用随机方式，并非从中央裁剪（256 -> 224）,在ILSVRC-2012验证集上，top-5错误率由16%降低到了13.5%
+- spatial Net 采用在ILSVRC-2012的训练集和测试集上采用相同的数据增强方式后，训练并验证。
+
+- 由于裁剪采用随机方式，并非从中央裁剪（256 -> 224）,在ILSVRC-2012验证集上，top-5错误率由16%降低到了13.5%
 
 （5）Mutil-GPU training
 
+- temporal ConvNet 训练采用4个NVIDIA Titan显卡，训练了一天。比起单张GPU训练，快了3.2倍。
 
 （6）Optical flow
 
