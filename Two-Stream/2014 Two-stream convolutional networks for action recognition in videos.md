@@ -165,10 +165,34 @@ Which confirms the importance of motion information for action recognition.
 
 （4）Multi-tast learning of temporal ConvNets
 
+- fine-tuning a temporal network pre-trained on UCF-101
+
+- adding 78 classes from UCF-101, which are manually selected so that there is no intersection between these classes and the native HMDB-51 classes
+
+- using the multi-task formulation (Sect. 4) to learn a video representation, shared between the UCF-101 and HMDB-51 classification tasks.
+
 ![Training setting & accuracy](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180523222621.png)
 
 
-(1)
+（5）Two-stream ConvNets(spatial和temporal网络合并)
+
+![不同fusion方式准确率对比](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528232211.png)
+
+- temporal and spatial recognition streams are complementary, as their fusion significantly improves on both (6% over temporal and 14% over spatial nets); temporal和spatial识别是互补的，通过他们的融合，对于比单独作用准曲率分别有不同程度的提升
+
+- SVM-based fusion of softmax scores outperforms fusion by averaging（基于SVM的融合效果比平均融合好）
+
+- using bi-directional flow is not beneficial in the case of ConvNet fusion（利用双向光流对卷积网络融合而言没有益处）
+
+- temporal ConvNet, trained using multi-task learning, performs the best both alone and when fused with a spatial net.
+（采取multi-task的temporal ConvNet，比单独和与spatial net融合的效果都好）
+
+(6) Comparison with the state of the art
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528233350.png)
+
+
+### 7 Conclusions and directions for improvement
 
 
 
