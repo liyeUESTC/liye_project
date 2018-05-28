@@ -56,7 +56,11 @@
 - 第一张光流图，是x和y方向上的梯度，第二张光流图，是在第一张光流图的基础上，点的位置做了变化，不再是同位置的点，根据光流向量进行了变化。
 
 
-（3）
+（3）Bi-directional optical flow(双向光流)
+
+- stacking L/2 forward flows between frames T and T+L/2 (前向光流，二分之T)
+
+- stacking L/2 backward flows between frames T-L/2 and T（后向光流，二分之T）
 
 
 ### 4 Multi-tast learning
