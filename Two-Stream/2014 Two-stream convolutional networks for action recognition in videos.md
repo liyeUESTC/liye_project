@@ -137,7 +137,7 @@
 
 - 数据集划分,UCF101和HMDB-51的训练集和测试集分别被整理者划分了三次（three splits），每次的划分准则不同。
 
-Basically the uccf-101 dataset is split into train and test data three times.
+Basically the ucf-101 dataset is split into train and test data three times.
 
 （ucf提供了三种训练/测试数据划分方案）
 
@@ -152,6 +152,8 @@ Basically the uccf-101 dataset is split into train and test data three times.
 - pre-training on ILSVRC-2012 followed by fine-turning on UCF-101 (在ucf101上finetuning所有参数)
 
 - keep the pre-trained network fixed and only training the last(classification) layer   （在ucf101上finetuning最后一层参数）
+
+- fine-tuning the whole network gives only（ft所有参数） marginal improvement over training the last layer only（ft最后一层参数）.
 
 （3）Temporal ConvNets
 
