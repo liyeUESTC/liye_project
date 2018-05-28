@@ -44,14 +44,16 @@
 
 设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
 
-- figure3左图，光流堆叠，四张光流图，$ \tau $
+- figure3左图，光流堆叠，四张光流图，每张光流图的p就代表了光流图的d，方向向量。
 
 ![两种光流计算方式对比](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528160840.png)
 
 
-（2）Trajectory stacking （轨迹堆叠，）
+（2）Trajectory stacking （轨迹堆叠，轨迹光流）
 
+![轨迹堆叠光流计算公式](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528164448.png)
 
+- 第一张光流图，是x和y方向上的梯度，第二张光流图，是在第一张光流图的基础上，点的位置做了变化，不再是同位置的点，根据光流向量进行了变化。
 
 
 （3）
@@ -144,12 +146,6 @@ Which confirms the importance of motion information for action recognition.
 
 
 (1)
-
-$ J_\alpha(x) $
-
-
-
-$\alpha$
 
 
 
