@@ -63,16 +63,28 @@
 - stacking L/2 backward flows between frames T-L/2 and T（后向光流，二分之T）
 
 
+#### 3.2 Relation of the temporal ConvNet architecture to previous representations
+
+
 ### 4 Multi-tast learning
+
+（1）把两个数据集合并成一个，增大数据集。
+
+- 手动挑选分类相同的数据，把其中一个数据集的数据加到另一个数据集中。
+
+（2）考虑到temporal Net网络的训练数据较少，temporal ConvNet 采用了 Multi-task learning
+
+- 针对temporal Net，最后一个全连接层后采用两个softmax层，分别用于训练UCF101和HMDB51，然后把loss求和
+
+（3）Multi-task learning 基础知识
 
 ![多任务与单任务的区别](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180523221227.png)
 
+- faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分两个任务。
 
-faster-rcnn中也采用了Multi-tast learning,框的位置矫正和分类得分两个任务。
+- CNN的最后一层连到多个softmax的层上，对应不同的数据集，这样就可以在多个数据集上进行multi-task learning
 
-（1）CNN的最后一层连到多个softmax的层上，对应不同的数据集，这样就可以在多个数据集上进行multi-task learning
-
-（2）增大数据集可以降低过拟合。To decrease over-fitting, one could consider combining the two datasets into one.
+- 增大数据集可以降低过拟合。To decrease over-fitting, one could consider combining the two datasets into one.
 
 ### 5 Implementation details
 
