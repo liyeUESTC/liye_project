@@ -44,7 +44,7 @@
 
 设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
 
-- figure3左图，光流堆叠，四张光流图，$\tau$
+- figure3左图，光流堆叠，四张光流图，$ \tau $
 
 ![两种光流计算方式对比](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528160840.png)
 
@@ -145,7 +145,7 @@ Which confirms the importance of motion information for action recognition.
 
 (1)
 
-
+$ J_\alpha(x) $
 
 
 
