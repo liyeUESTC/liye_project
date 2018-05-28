@@ -26,17 +26,33 @@
 
 ### 3 Optical flow ConvNets
 
-（1）传统定义的光流:displacement----dt(u,v)表示t时刻对应帧上的点（u,v）到t+1时刻点（u,v）的方向向量
 
-（2）第0帧到接下来的L帧，共有L+1帧，相邻两帧之间求光流，可以得到L帧光流图，每点的光流是二维的，分X轴和Y轴
-
-设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
 
 #### 3.1 ConvNet input configurations
 
-（1）Optical flow stacking(光流堆叠)
+![光流信息描述图](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528160328.png)
 
-（2）Trajectory stacking （轨迹堆叠）
+（1）Optical flow stacking(光流堆叠，传统光流表示)
+
+![光流堆叠计算公式](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528154719.png)
+
+- I（T）：T帧光流信息作为输入，维度是w * h * 2L；
+
+- 传统定义的光流:displacement----dt(u,v)表示t时刻对应帧上的点（u,v）到t+1时刻点（u,v）的方向向量
+
+- 第0帧到接下来的L帧，共有L+1帧，相邻两帧之间求光流，可以得到L帧光流图，每点的光流是二维的，分X轴和Y轴
+
+设每帧的长宽分别是w * h,则输入temporal net的信息维度为 w * h * 2L。
+
+- figure3左图，光流堆叠，四张光流图，$\tau$
+
+![两种光流计算方式对比](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180528160840.png)
+
+
+（2）Trajectory stacking （轨迹堆叠，）
+
+
+
 
 （3）
 
