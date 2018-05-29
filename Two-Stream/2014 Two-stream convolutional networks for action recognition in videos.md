@@ -99,7 +99,7 @@
 
 （flipping、cropping和RGB jittering是数据增强的方式）
 
-- temporal net training: 
+- temporal net training: w * h * 2L(videos) -> 224 * 224 * 2L(从原video中随机cropped和clipped)
 
 - learning rate 设置， batchsize为256
 
@@ -107,7 +107,7 @@
 
 - 在一个video里面，等间隔挑选25帧作为测试样本,一段视频，选择25个样本
 
-- 每一帧通过cropping和flipping可以得到10个卷积输入（cropping和flippinh是数据增强的方式）
+- 每一帧通过cropping和flipping可以得到10个卷积输入（cropping和flipping是数据增强的方式）
 
 - 平均25个样本的10个输入（一共250个输入）的score，作为整个video的score
 
