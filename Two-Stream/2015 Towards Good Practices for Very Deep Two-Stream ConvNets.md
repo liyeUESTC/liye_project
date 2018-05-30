@@ -79,18 +79,46 @@
 
 - 除了cropping和flipping，作者又提出两种data augmentation的方法。
 
-- 
+- 设计一种crop策略：裁剪4个角和中心，也就是从四个角裁剪出224 * 224 * 3大小的和从中心裁剪出224 * 224 * 3大小的，相比于随机裁剪的只从图片中心裁剪来说，该种才检查策略可以通过增加样本的多样性来降低过拟合
+
+- multi-scale cropping
+
+
 
 (4)High Dropout Ratio
+
+- temporal net:设置为0.9和0.8的dropout ratio
+
+- spatial net:设置为0.9和0.9的dropout ratio
 
 (5)Multi-GPU training
 
 
+
 #### 2.3 Network testing
+
+- 选取25帧图片，用于测试spatial和temporal网络，对于挑选的每一帧，我们可以获得两个深度网络的10个输入，4个角落裁剪、1个中心裁剪以及它们的水平翻转。
+
+- 最后得分取所有样本的平均得分。
+
+- 融合spatial和temporal net，权重线性融合，temporal：spatial=2:1
 
 ### 3 Experiments
 
+（1）Datasets and Implementation Details
+
+
+
+(2) Results
+
+![Table1](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180530163400.png)
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180530171035.png)
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180530171043.png)
+
 ### 4 Conclusions
+
 
 
 ** 空间流224 * 224 * 3  ；时间流 224 * 224 * 10 **
