@@ -84,7 +84,7 @@
 
 前人研究得到在时域对卷积层进行max pooling的效果很好。我们把max pooling对推广到了3D pooling，3D pooling对特征位置的一些微笑改变可以保持不变。
 
-而且，3D conv能够让filter进行更好的学习。例如中心化中心时间样本的权重，或者分别时间和空间。
+而且，3D conv能够让filter进行更好的学习。例如中心化中心时间样本的权重，或者辨别时间和空间。
 
 #### 3.4 Proposed architecture
 
@@ -93,6 +93,16 @@
 
 
 #### 3.5 Implementation details
+
+(1)Two-Stream architecture
+
+（2）Two-Stream ConvNet fusion
+
+（3） Spatiotemporal architecture
+
+- 3D 卷积融合核的维度是3（卷积核长） * 3（宽） * 3（时间维度） * 1024（channel通道数，取决于前面的ReLu5的spatial和temporal输出） * 512（卷积核的个数，取决于紧接着的FC6层）。
+
+- 
 
 
 ### 4 Evaluation
