@@ -82,7 +82,9 @@
 
 - Disscussion：
 
+前人研究得到在时域对卷积层进行max pooling的效果很好。我们把max pooling对推广到了3D pooling，3D pooling对特征位置的一些微笑改变可以保持不变。
 
+而且，3D conv能够让filter进行更好的学习。例如中心化中心时间样本的权重，或者分别时间和空间。
 
 #### 3.4 Proposed architecture
 
