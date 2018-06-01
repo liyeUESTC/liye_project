@@ -78,8 +78,9 @@
 
 - 3D Pooling： 用大小为 W' * H' * T'的cube进行3D的max-pooling，如上图b所示。需要注意的是这里没有跨channel的pooling，跨的是时间维度。
 
-- 3D Conv + Pooling： 首先用D'个filter对四维的input x 进行卷积,filter的维度是H''* W'' * D * D'，再加上一个biases，b的维度是D维，
-输出y = x_t*f+b
+- 3D Conv + Pooling： 首先用D'个filter对四维的input x 进行卷积,D'个filter加起来的维度是W''* H'' * T' * D * D'，每个filter的维度是W''* H'' * T' * D，再加上一个biases，b的维度是D维，输出y = x_t * f+b，然后再接3D Pooling，filter的作用是对局部时空features进行融合。
+
+- Disscussion：
 
 
 
