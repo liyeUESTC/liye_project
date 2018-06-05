@@ -6,7 +6,7 @@
 
 - fusion不一定在softmax层进行，可以在卷积层进行。不仅性能没有损失，而且节省了大量的参数
 
-- 在最后一层进行融合要比在之前的层进行融合效果好，同时在分类预测层进行融合可以提升准确率
+- 在最后一个卷积层进行融合要比在之前的卷积层进行融合效果好，同时在分类预测层进行融合可以提升准确率
 
 - 对时空领域中抽象卷积层特征进行pooling能够提升性能
 
@@ -90,6 +90,11 @@
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180531112240.png)
 
+- 利用3D卷积和3D Pooling融合temporal和spatial，此处不明白如何进行3D Conv fusion。
+
+- fusion后不会truncate temporal stream，temporal stream利用3D Pooling进行融合。取样T，每个T都有一些列光流图，构成不同channel，然后不同的T进行3D pooling,，融合特征。举例：T时刻的取样可能是拿箭，后续的取样时刻可能对应拉弓和射箭，进行了不同T时刻的取样和融合后，可以更加准确地学习射箭这个完整动作。
+
+
 
 
 #### 3.5 Implementation details
@@ -107,20 +112,37 @@
 
 ### 4 Evaluation
 
+
+
+
 #### 4.1 Datasets and experimental protocols
+
+- 介绍UCF101和HMDB51数据集。
+
+
 
 
 #### 4.2 How to fuse the two streams spatially?
 
+- 在诸多fusion方式中，采用Conv方式融合效果最好
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180605171707.png)
 
 #### 4.3 Where to fuse the two streams spatially?
 
+- 在诸多可以进行fusion和point中，在ReLu5 layer后进行融合的效果最好。
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180605171933.png)
 
 #### 4.4 Going from deep to very deep models
 
 
+
 #### 4.5 How to fuse the two streams temporally?
 
+- 2D或者3D，进行融合。
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180605172159.png)
 
 #### 4.6 Comparison with the state-of-the-art
 
