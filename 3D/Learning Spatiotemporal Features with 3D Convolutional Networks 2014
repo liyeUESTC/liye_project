@@ -1,0 +1,12 @@
+## Learning Spatiotemporal Features with 3D Convolutional Networks 2014
+
+### 4 properties for an effective video descriptor:
+
+- generic: can represent different types discriminatively
+
+- compact: processing, storing, and retrieving tasks more scalable
+
+- efficient to compute
+
+- simple to implement
+
