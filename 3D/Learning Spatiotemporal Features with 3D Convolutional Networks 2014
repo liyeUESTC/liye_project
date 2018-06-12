@@ -62,7 +62,7 @@ Training:
 • stopped at 1.9M iterations (about 13 epochs)
 
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180611234245.png)
 
 • results:
 • video predictions: average clip predictions of 10 clips randomly extracted from the video.
@@ -102,6 +102,10 @@ convolution layers, all other common settings fixed
 output signal at the last pooling layer, thus they
 have the same number of parameters for fully
 connected layers
+
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180611234438.png)
+
 
 
 • homogeneous temporal depth:
