@@ -41,67 +41,86 @@
 - no change in term of size from the input to the output of these convolution layers
 
 
-- All pooling layers are max pooling with 2*2*2 (not
-pool1) so the size of output signal is reduced by a
-factor of 8 compared with the input signal
+- All pooling layers are max pooling with 2*2*2 (not pool1) so the size of output signal is reduced by a factor of 8 compared with the input signal
 
-- pool1 1*2*2 >>> not to merge the temporal signal
-too early
+- pool1 1*2*2 >>> not to merge the temporal signal too early
 
 - l=16 temporally pool with factor 2 at most 4 times
 
 
 Training:
+
 • use sports1m
+
 • randomly extract five 2-second long clips from every training video.
+
 • Clips are resized to 128*171
+
 • randomly crop input clips into 16 * 112 * 112
+
 • horizontally flip them with 50% probability
+
 • SGD with mini batch size = 30
+
 • Initial learning rate is 0.003, and is divided by 2 every 150K iterations
+
 • stopped at 1.9M iterations (about 13 epochs)
 
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180611234245.png)
 
 • results:
+
 • video predictions: average clip predictions of 10 clips randomly extracted from the video.
+
 • only a single center crop per clip
+
 • The C3D network trained from scratch:84.4% at video top- 5 accuracy.
+
 • fine-tuned from the I380K pre-trained model: 85.5% at video top- 5 accuracy
 
 
 
 
 • Action recognition results on UCF101
+
 • 3 nets:
+
 • C3D trained on I380K
+
 • C3D trained on Sports-1M
+
 • C3D trained on I380K and fine-tuned on Sports-1M
+
 • concatenate the L2-normalized C3D descriptors of these nets
 
 
 
 • C3D with iDT as they are highly complementary to each other
+
 • iDT are hand-crafted features based on optical flow tracking and histograms of low-level gradients
+
 • C3D captures high level abstract/semantic information.
+
 • C3D needs to be combined with iDT to outperform two-stream networks
 
 training:
+
 • mini-batches of 30 clips
-• learning rate of 0.003 divided by 10 after every 4
-epochs
+
+• learning rate of 0.003 divided by 10 after every 4 epochs
+
 • stopped after 16 epochs
 
 • experiments:
-• only vary kernel temporal depth di of the
-convolution layers, all other common settings fixed
+
+• only vary kernel temporal depth di of the convolution layers, all other common settings fixed
+
 • 1) homogeneous temporal depth
+
 • 2) varying temporal depth
-• all of these networks have the same size of the
-output signal at the last pooling layer, thus they
-have the same number of parameters for fully
-connected layers
+
+• all of these networks have the same size of the output signal at the last pooling layer, thus they have the same number of parameters for fully connected layers
 
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180611234438.png)
@@ -109,12 +128,16 @@ connected layers
 
 
 • homogeneous temporal depth:
+
 • depth-d network: d as temporal depth
+
 • eg: depth-1 net is equivalent to applying 2D convolutions on separate frames
 
 
 • varying temporal depth:
+
 • temporal depth increasing: 3-3-5-5-7
+
 • temporal depth decreasing: 7-5-5-3-3 depth-3 is the best
 
 
