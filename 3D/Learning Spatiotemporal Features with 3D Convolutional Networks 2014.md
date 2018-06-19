@@ -24,15 +24,15 @@
 
 - a softmax loss layer
 
-- input size: c*l*h*w = 3*16*128*171
+- input size: c* l* h* w = 3* 16* 128* 171
 
 - ->random crop-> 3*16*112*112
 
-- convolution kernel size: d*k*k = 3*3*3 with stride 1*1*1 in both spatial and temporal dimensions
+- convolution kernel size: d* k* k = 3*3*3 with stride 1* 1* 1 in both spatial and temporal dimensions
 
-- pool1 pooling kernel size: d*k*k=1*2*2 with stride1*2*2
+- pool1 pooling kernel size: d* k* k=1* 2* 2 with stride1* 2* 2
 
-- rest pooling kernel size: d*k*k = 2*2*2 with stride 2*2*2
+- rest pooling kernel size: d* k* k = 2* 2* 2 with stride 2* 2* 2
 
 - each fully connected layer has 4096 output units
 
@@ -41,20 +41,20 @@
 - no change in term of size from the input to the output of these convolution layers
 
 
-- All pooling layers are max pooling with 2*2*2 (not pool1) so the size of output signal is reduced by a factor of 8 compared with the input signal
+- All pooling layers are max pooling with 2* 2* 2 (not pool1) so the size of output signal is reduced by a factor of 8 compared with the input signal
 
-- pool1 1*2*2 >>> not to merge the temporal signal too early
+- pool1 1* 2* 2 >>> not to merge the temporal signal too early
 
 - l=16 temporally pool with factor 2 at most 4 times
 
 
-Training:
+###  Training:
 
 • use sports1m
 
 • randomly extract five 2-second long clips from every training video.
 
-• Clips are resized to 128*171
+• Clips are resized to 128* 171
 
 • randomly crop input clips into 16 * 112 * 112
 
@@ -69,7 +69,7 @@ Training:
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180611234245.png)
 
-• results:
+#### results:
 
 • video predictions: average clip predictions of 10 clips randomly extracted from the video.
 
@@ -104,7 +104,7 @@ Training:
 
 • C3D needs to be combined with iDT to outperform two-stream networks
 
-training:
+### training:
 
 • mini-batches of 30 clips
 
@@ -112,7 +112,7 @@ training:
 
 • stopped after 16 epochs
 
-• experiments:
+#### experiments:
 
 • only vary kernel temporal depth di of the convolution layers, all other common settings fixed
 
