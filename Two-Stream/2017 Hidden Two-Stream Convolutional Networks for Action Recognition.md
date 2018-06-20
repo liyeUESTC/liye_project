@@ -10,5 +10,5 @@
 
 进行cmake时，出现如下bug：
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180620181645.png)
 
