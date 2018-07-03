@@ -3,7 +3,7 @@
 
 ## 卸载openmpi
 
-查看openmpi版本：runmpi --version
+查看openmpi版本：runmpi --version  （--with-cuda） # 编译openmpi的cuda接口，才可以调用使用openmpi调用caffe
 
 - 删掉安装目录
 
