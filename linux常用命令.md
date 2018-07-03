@@ -39,7 +39,8 @@
 - sudo fdisk -l 查看硬盘情况
 - df -l 查看硬盘挂在情况
 - nvidia-smi 查看显卡使用情况
-- nmon  查看CPU、内存使用信息   “q”退出
+- watch -n 0.1 nvidia-smi  每隔0.1s查看显卡情况
+- nmon  查看CPU、内存使用信息     “q”退出
 
 
 ****
