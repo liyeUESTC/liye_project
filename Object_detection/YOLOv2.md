@@ -47,8 +47,25 @@
 
 ### loss函数
 
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/%E5%9B%BE%E7%89%879.png)
 
+- 损失函数的定义是在region_layer.c文件中。
 
+- 进行训练的一共有四类loss，他们weight不同，分别是object、noobject、class、coord。
+
+- 总体loss是四个部分的平方和。下图最后一项只在训练初期使用
+
+- 这里计算了box的梯度，注意loss的权重为这么设置的好处是缓解box尺寸不平衡问题。
+
+- Sum-squred error also equally weights errors in large boxes and small boxes. Our error metric should reflect that small derivations in large boxes matter less than in small boxes. To partially address this we predict the square root of the bounding box width and height instead of the width and height directly.
+
+- 即yolo v1中使用w和h的开方缓和该问题，而在yolo v2中则通过赋值一个和w，h相关的权重函数达到该目的。
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/%E5%9B%BE%E7%89%8710.png)
+
+- 这段代码主要是计算anchors中没能提供truth的有效预测的那些anchor如何计算损失。有点类似于包含object和不包含object的cell的损失差异，这里没有提供有效预测的anchors则使用scale=0.01的权重计算损失。主要目的是为了在模型训练的前期更加稳定。参见yolo v1中关于object和非object cell的论述。
+
+- Also, in every image many grid cells do not contain any object. This pushes the donfidence scores of thos cells towards zero, ofthen overpowering the gradient from cells that do contain objects. This can lead to model instability, causing training to diverge early on.
 
 
 
