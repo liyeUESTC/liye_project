@@ -153,6 +153,8 @@
 
 - 每个cell预测5个bounding box，每个bounding box预测5个值：tx，ty，tw，th和to。tx和ty经过sigmoid函数处理后范围在0到1之间，这样的归一化处理也使得模型训练更加稳定；cx和cy表示一个cell和图像左上角的横纵距离；pw和ph表示bounding box的宽高，这样bx和by就是cx和cy这个cell附近的anchor来预测tx和ty得到的结果
 
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180705093407.png)
+
 - 黑色虚线框是bounding box。
 
 - 蓝色矩形框就是预测的结果。
@@ -161,7 +163,7 @@
 
 - 由tx,ty,tw,th得到bx,by,bw,bh的详细公式如下：
 
-
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/%E5%9B%BE%E7%89%8715.png)
 
 - σ(t0)表示预测的边框的置信度，为预测的边框的概率和预测的边框与ground truth的IOU值的乘积
 
