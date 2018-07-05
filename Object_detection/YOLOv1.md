@@ -72,6 +72,19 @@
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180625221611.png)
 
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/%E5%9B%BE%E7%89%8711.png)
+
+(1)部分1：为边界框位置与大小的损失函数，式中对宽高都进行开根是为了使用大小差别比较大的边界框差别减小。
+
+- 例如，一个同样将一个100x100的目标与一个10x10的目标都预测大了10个像素，预测框为110 x 110与20 x 20。显然第一种情况我们还可以适当接受，但第二种情况相当于把边界框预测大了一倍，但如果不使用根号函数，那么损失相同，都为200。但把宽高都增加根号时：
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/%E5%9B%BE%E7%89%8712.png)
+
+- 显然，对小框预测偏差10个像素带来了更高的损失。通过增加根号，使得预测相同偏差与更小的框产生更大的损失。但根据YOLOv2的实验证明，还有更好的方法解决这个问题。
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180705091443.png)
+
+
 
 
 
