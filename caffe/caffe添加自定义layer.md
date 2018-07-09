@@ -10,7 +10,9 @@
 
 - 添加新定义的“message * Parameter”
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180709114231.png)
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180709163734.png)
 
 （4）添加参数和消息函数
 
