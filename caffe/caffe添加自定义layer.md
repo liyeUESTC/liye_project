@@ -7,8 +7,10 @@
 （3）修改“src/caffe/proto/caffe.proto”文件
 
 - 覆盖原文件中的同名“message *Parameter”
-- 添加新定义的“message *Parameter”
 
+- 添加新定义的“message * Parameter”
+
+![]()
 
 （4）添加参数和消息函数
 
@@ -16,8 +18,11 @@
 
 - 在caffe.proto的新定义层中添加需要添加的消息函数和对应的ID
 
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180709114215.png)
+
 （5）重新编译 
 
 
 
 ** 参考文档 https://blog.csdn.net/shuzfan/article/details/51322976  **
+** https://blog.csdn.net/bvl10101111/article/details/74837156 **
