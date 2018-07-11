@@ -22,7 +22,9 @@
 
 （4）建立软链接
 
-sudo rm -rf libcudnn.so libcudnn.so.5 #删除原有动态文件
+- sudo chmod a+r /usr/local/cuda/lib64/libcudnn.so.5.1.10  # 给所有用户添加.5.1.10的可读权限
+
+- sudo rm -rf libcudnn.so libcudnn.so.5 #删除原有动态文件
 
 - sudo ln -sf libcudnn.so.5.1.10（改版本号根据自己下载的决定） libcudnn.so.5 # 把5.1.10 建立到 .5 
 
