@@ -36,6 +36,9 @@ apt-get remove-doc opencv-data python-opencv  # 移除python相关
 
 ** 第一次安装完后，查看版本，报错。之后再重新安装一次，上述命令改为“/usr/local/”，安装完后，版本查看正确 **
 
+** 注意：目录直接为/usr/local，不需要加具体文件夹名称  **
+
+
 - make -j24
 
 - make install
