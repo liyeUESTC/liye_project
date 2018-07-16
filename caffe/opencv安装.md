@@ -32,7 +32,7 @@ apt-get remove-doc opencv-data python-opencv  # 移除python相关
 
 - cd build
 
-- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local/opencv3.3.0 ..
+- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 
 ** 第一次安装完后，查看版本，报错。之后再重新安装一次，上述命令改为“/usr/local/”，安装完后，版本查看正确 **
 
