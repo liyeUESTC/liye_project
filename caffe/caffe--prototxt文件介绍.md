@@ -14,3 +14,13 @@
 - fc层已经计算出了每一类的数值，但数值不是0~1之间。需要softmax把fc层得到的数据进行计算，得到每一类的概率大小。
 
 - global average pooling: 类型为Pooling，只是kernel_size大小变为上一层feature map的大小。
+
+- BN层： 输入归一化 x_norm = (x-u)/std, 其中u和std是个累计计算的均值和方差。
+
+- scale层： y=alpha* x_norm + beta，对归一化后的x进行比例缩放和位移。其中alpha和beta是通过迭代学习的。那么caffe中的bn层其实只做了第一件事，scale层做了第二件事，所以两者要一起使用。alpha和beta是通过训练后学习得到的。
+
+- 在Caffe中使用Batch Normalization需要注意以下两点：
+
+（1） 要配合Scale层一起使用。
+
+（2） 训练的时候，将BN层的use_global_stats设置为false，然后测试的时候将use_global_stats设置为true。
