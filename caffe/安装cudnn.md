@@ -10,6 +10,8 @@
 
 - 官网如下：https://developer.nvidia.com/rdp/cudnn-archive，需要注册帐号
 
+- 下载该版本：cuDNN v5.1 Library for Linux
+
 - 下载与cuda版本匹配的cudnn版本，可以先下载到本地，再上传到服务器，可能需要sudo rz
 
 - 下载版本可能是.*theme*格式的文件，只需要cp为.tgz文件，再进行解压即可。
