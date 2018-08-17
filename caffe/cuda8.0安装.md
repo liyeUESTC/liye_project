@@ -5,6 +5,8 @@
 
 - 根据平台选择对应的runfile(local)文件
 
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180817165708.png)
+
 - 运行可执行文件，按照安装教程进行安装
 
 
