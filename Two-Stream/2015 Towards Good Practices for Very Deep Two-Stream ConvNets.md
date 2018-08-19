@@ -30,7 +30,7 @@
 
 - 描述了测试策略
 
-#### 2.1 Network architectures
+#### 2.1 Network architectures （GoogleNet或者VGGNet）
 
 (1)GoogleNet(介绍GoogleNet结构，Inception module)
 
