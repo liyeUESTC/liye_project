@@ -20,6 +20,8 @@
 
 （3）late fusion(融合)： averaging or multi-class linear SVM(以softmax输出作为feature)
 
+（4）网络结构为论文作者自己架构，不属于任何经典网络。
+
 
 
 
