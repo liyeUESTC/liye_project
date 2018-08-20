@@ -52,6 +52,9 @@ Text-CNN
 - 300维向量与39维向量拼接，得到339维向量
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180820160644.png)
 
+数据集准备：
+
+
 
 
 
