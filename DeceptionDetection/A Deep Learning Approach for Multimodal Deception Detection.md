@@ -46,10 +46,11 @@ Text-CNN
 
 (1)Concatenation
 直接拼接，得到939维特征向量
-
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180820150331.png)
 (2)Handamard + Concatenation
 - 前三个特征向量做Handamard运算（对应位置元素相乘），得到一个300维向量
 - 300维向量与39维向量拼接，得到339维向量
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/QQ%E6%88%AA%E5%9B%BE20180820160644.png)
 
 
 
