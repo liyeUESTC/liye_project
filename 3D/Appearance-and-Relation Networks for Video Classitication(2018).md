@@ -11,7 +11,7 @@ ARTNet在Kinetics上实验的结果表明，仅通过RGB的输入，train from s
 
 
 
-ax^{2} + by^{2} + c = 0
+<a href="https://www.codecogs.com/eqnedit.php?latex=ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" title="ax^{2} + by^{2} + c = 0" /></a>
 
 
 
