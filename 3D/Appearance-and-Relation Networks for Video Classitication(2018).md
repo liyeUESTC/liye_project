@@ -11,8 +11,23 @@
 (7)ARTNet在Kinetics上实验的结果表明，仅通过RGB的输入，train from scratch， 能够达到RGB上state-of-the-art的性能。
 (8)模型深挖rgb中的 appearance 和 relation 信息，smart模块对这个两个信息解耦独立建模后融合，下图可以看出，ARTnet利用了双流和c3d各自的优点。
 ```
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/51.png)
 
+
+### 1.Introduction
+
+
+
+### 2.Related Work
+
+
+### 3.Spatiotemporal Feature Learning
+
+
+### 4.Experiments
+
+
+### 5.Conclusion and Future Work
 
 
 
