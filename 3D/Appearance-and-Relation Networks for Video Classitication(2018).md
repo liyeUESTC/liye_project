@@ -1,10 +1,17 @@
 ## Appearance-and-Relation Network for Video Classification(2018)
 
+### Abstract
+
+主要工作是在3D卷积的基础上，提升了action recognition的准确率，没有使用光流信息，因为光流的提取速度特别慢，这可能是未来的研究趋势
+实验以C3D-ResNet18实现的，只以rgb为输入，训练的时候采用了TSN的稀疏采样策略。appearance分支对每帧图片提取特征（可以看作two-stream中RGB流）。relation分支利用multiplicative interactions对多帧提取特征，用于捕获帧与帧之间的关系
+
+ARTNet主要是由SMART blocks 通过堆叠的方法组合起来，就好像ResNet主要是由Residual blocks组合起来一样。它是一种直接输入RGB视频图像的端到端的视频理解模型。
+
+ARTNet在Kinetics上实验的结果表明，仅通过RGB的输入，train from scratch， 能够达到RGB上state-of-the-art的性能
 
 
 
-
-
+ax^{2} + by^{2} + c = 0
 
 
 
@@ -19,3 +26,4 @@ https://blog.csdn.net/elaine_bao/article/details/79452401
 
 https://blog.csdn.net/qq_20791919/article/details/78853278
 
+https://www.cnblogs.com/demian/p/9647855.html
