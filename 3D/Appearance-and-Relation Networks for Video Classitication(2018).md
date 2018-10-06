@@ -9,8 +9,9 @@
 (5)ARTNet主要是由SMART blocks 通过堆叠的方法组合起来，就好像ResNet主要是由Residual blocks组合起来一样。
 (6)它是一种直接输入RGB视频图像的端到端的视频理解模型。
 (7)ARTNet在Kinetics上实验的结果表明，仅通过RGB的输入，train from scratch， 能够达到RGB上state-of-the-art的性能。
+(8)模型深挖rgb中的 appearance 和 relation 信息，smart模块对这个两个信息解耦独立建模后融合，下图可以看出，ARTnet利用了双流和c3d各自的优点。
 ```
-
+![]()
 
 
 
