@@ -71,18 +71,20 @@ framed大小128* 170，input size112* 112* 16。
 
 #### 4.2 Results on the Kinetics dataset
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/54.png)
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/55.png)
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/56.png)
 
-![]()
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/57.png)
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/58.png)
 
 
 ### 5.Conclusion and Future Work
 
-
+- 相比C3D已经有了显著的提升，但是相比于two-stream仍然有差距，为了缩小这种差距，未来尝试更深的网络和更大的分辨率
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" title="ax^{2} + by^{2} + c = 0" /></a>
 
