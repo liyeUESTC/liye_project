@@ -23,6 +23,30 @@
 
 ### 3.Spatiotemporal Feature Learning
 
+#### 3.2 SMART blocks
+
+
+本文的一大亮点是能量模型，使用了一种近似square-pooling的结构。
+与原结构不同之处在于三点：第一，从无监督到了有监督；第二，从仅有relation到有appearance和relation；第三，从单层到stacking多层
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/52.png)
+
+appearance分支对位置结构建模，relation分支对时域关系建模
+
+relation分支：C3D加上relation model，其中relation model用到了square-pooling，以及 1* 1* 1的卷积实现的cross-channel-pooling，最后fusion，concat.
+
+cross-channel pooling等于对子空间做sum操作，论文中讲子空间设为2（对应channel的feature map和其相邻的feature map加和），pooling的权重是固定的0.5
+
+其中Z的通道数是U的一半，而U和F通道数相同。reduction layer 的输出channel和appearance的channel一致
+
+
+#### 3.3 Examples: ARTNet-ResNet18
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/53.png)
+
+这是三种模型结构，第一种是C3D-ResNet18；第二种是ARTNet-ResNet18(s)，就是只在第一层conv换成smart；第三种是ARTNet-ResNet18(d),就是每一层conv都换成smart.
+
+** 李耶 **
 
 ### 4.Experiments
 
