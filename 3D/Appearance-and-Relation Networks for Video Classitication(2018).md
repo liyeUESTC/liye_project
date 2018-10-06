@@ -64,6 +64,20 @@ framed大小128* 170，input size112* 112* 16。
 然后10crops(5crops加上水平反转，5crops是中间加上四个角)，最后取这250个的平均。
 ```
 ### 4.Experiments
+文章大部分实验都是在kinetics完成，模型都是从kinetics上train from scratch得到
+
+#### 4.1 数据集
+(1)Kinectics (2)UCF101 (3)HMDB51
+
+#### 4.2 Results on the Kinetics dataset
+
+![]()
+
+![]()
+
+![]()
+
+![]()
 
 
 ### 5.Conclusion and Future Work
