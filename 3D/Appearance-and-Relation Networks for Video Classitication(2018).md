@@ -81,7 +81,7 @@ multiplicative interactions的操作和乘性噪声相似。
 
 #### 3.2 SMART blocks
 
-![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/52.png)
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/59.png)
 - SMART Block介绍
 ```
 (1)appearance分支对位置结构建模，relation分支对时域关系建模。
