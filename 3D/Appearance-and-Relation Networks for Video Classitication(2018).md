@@ -50,23 +50,24 @@
 (6)Wang et al.(Temporal segment networks: Towards good practices for deep action recognition). In: ECCV.(2016)
   提出稀疏采样和时域融合，目的是学习整个视频信息。
 ```
-**short-term temporal modeling**
+our work focus on **short-term temporal modeling**
 
 - Models based on multiplicative interactions
 
+
+- 本文亮点
+```
+本文的一大亮点是能量模型，使用了一种近似square-pooling的结构。与原结构不同之处在于三点：
+(1)relation branch的weights从原来的无监督学习变成现在通过标准反向传播的有监督学习。
+(2)ralation branch融合了appearance和relation信息，相比与原来只注重relation信息。
+(3)ARTNets通过多个SMART block堆叠而成，相比于原来仅采用单一的layer。
+```
  
 
 ### 3.Spatiotemporal Feature Learning
 
 #### 3.2 SMART blocks
 
-- 本文亮点
-```
-本文的一大亮点是能量模型，使用了一种近似square-pooling的结构。与原结构不同之处在于三点：
-第一，从无监督到了有监督；
-第二，从仅有relation到有appearance和relation；
-第三，从单层到stacking多层
-```
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/52.png)
 ```
 appearance分支对位置结构建模，relation分支对时域关系建模。
