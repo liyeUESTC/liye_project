@@ -73,10 +73,10 @@ our work focus on **short-term temporal modeling**
 ```
 (1)appearance分支对位置结构建模，relation分支对时域关系建模。
 (2)relation分支：C3D + relation model
-   其中relation model用到了square-pooling，以及 1* 1* 1的卷积实现的cross-channel-pooling，最后fusion，concat。
+   其中relation model用到了square-pooling，cross-channel-pooling(1* 1* 1的卷积实现)。
 (3)cross-channel pooling等于对子空间做sum操作，论文中将子空间设为2（对应channel的feature map和其相邻的feature map加和），
    pooling的权重是固定的0.5
-其中Z的通道数是U的一半，而U和F通道数相同。reduction layer 的输出channel和appearance的channel一致。
+(4)U和F通道数相同，Z的通道数是U的一半，H的通道数和F的相同。
 ```
 
 #### 3.3 Examples: ARTNet-ResNet18
@@ -85,9 +85,9 @@ our work focus on **short-term temporal modeling**
 
 - 三种模型结构
 ```
-(1)第一种是C3D-ResNet18
-(2)第二种是ARTNet-ResNet18(s)，就是只在第一层conv换成smart
-(3) 第三种是ARTNet-ResNet18(d),就是每一层conv都换成smart.
+(1)第一种是C3D-ResNet18。
+(2)第二种是ARTNet-ResNet18(s)，就是只在第一层conv换成smart。
+(3) 第三种是ARTNet-ResNet18(d),就是每一层conv都换成smart。
 ```
  **实现细节** 
 - 训练网络：
@@ -107,8 +107,11 @@ framed大小128* 170，input size112* 112* 16。
 文章大部分实验都是在kinetics完成，模型都是从kinetics上train from scratch得到
 
 #### 4.1 数据集
-(1)Kinectics (2)UCF101 (3)HMDB51
-
+```
+(1)Kinectics 
+(2)UCF101 
+(3)HMDB51
+```
 #### 4.2 Results on the Kinetics dataset
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/54.png)
