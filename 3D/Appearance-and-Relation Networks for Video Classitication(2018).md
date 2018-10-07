@@ -76,11 +76,12 @@ cross-channel pooling等于对子空间做sum操作，论文中将子空间设�
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/53.png)
 
-这是三种模型结构
-1. 第一种是C3D-ResNet18
-3. 第二种是ARTNet-ResNet18(s)，就是只在第一层conv换成smart
-5. 第三种是ARTNet-ResNet18(d),就是每一层conv都换成smart.
-
+- 三种模型结构
+```
+(1)第一种是C3D-ResNet18
+(2)第二种是ARTNet-ResNet18(s)，就是只在第一层conv换成smart
+(3) 第三种是ARTNet-ResNet18(d),就是每一层conv都换成smart.
+```
  **实现细节** 
 - 训练网络：
 ```
