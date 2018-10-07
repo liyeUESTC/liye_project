@@ -66,6 +66,19 @@ our work focus on **short-term temporal modeling**
 
 ### 3.Spatiotemporal Feature Learning
 
+#### 3.1 Muitiplicative interactions
+- gap
+```
+文章对3D卷积得到的feature分析为认为是加性的，不能够充分对相邻帧的relation建模（时间特征），
+所以提出multiplicative interactions的方式来构建temporal特征
+```
+- multiplicative interactions
+```
+在对multiplicative interactions的理解上，想起了大学专业课对噪声分析的知识，分析噪声时有加性噪声
+和乘性噪声的区别。简单粗糙的理解，加性就是无关独立的，乘性就是相关不独立的，所以可以认为
+multiplicative interactions的操作和乘性噪声相似。
+```
+
 #### 3.2 SMART blocks
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/52.png)
@@ -170,7 +183,6 @@ framed大小128* 170，input size112* 112* 16。
 
 - 相比C3D已经有了显著的提升，但是相比于two-stream仍然有差距，为了缩小这种差距，未来尝试更深的网络和更大的分辨率
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" title="ax^{2} + by^{2} + c = 0" /></a>
 
 
 
