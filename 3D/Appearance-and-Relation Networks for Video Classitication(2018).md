@@ -16,9 +16,38 @@
 
 ### 1.Introduction
 
+视频分类的三种框架：
+(1)two-stream cnns
+优缺点：对视频分类非常有效，但是要分别训练两个网络，耗时长，同时需要事先计算光流，计算量较大。
+(2)3D cnns
+优缺点：利用3D卷积和3D池化，学习RGB系列帧的时空特征，但是效果逊色于two-stream。
+(3)2D cnns with temporal models
+优缺点：专注于捕捉粗糙的和长序列的时间结构，但是缺乏在局部时空窗口的时间关系特征表达。
+
+目标：
+在视频领域，利用SMART block捕捉appearance和relation.
+
 
 
 ### 2.Related Work
+
+- Deep learning for video classification
+1. Karpathy et al.(Large-scale video classification with convolutional neural networks). In: CVPR.(2014)
+第一次利用不同的temporal-fusion策略，在sports-1m数据集上测试深度网络。
+2. Simonyan et al.(Two-stream convolutional networks for action recognition in videos). In: NIPS.(2014)
+第一次提出two-stream，利用预训练好的alexnet网络和光流计算。
+3. Tran et al.(Learning spatiotemporal features with 3D convolutional networks). In: ICCV.(2015)
+提出3D网络，用于大规模视频数据集，同时将3D卷积用于ResNet。
+4. Carreira et al.(Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset). In: CVPR.(2018)
+提出了新的Two-Stream Inflated 3D CNNs网络，能够接收在Imagenet的预训练模型。
+5. Ng et al.(Beyond short snippets: Deep networks for video classification). In: CVPR.(2015)
+  和Donahue et al.(Long-term recurrent convolutional networks for visual recognition and description). In: CVPR.(2015)
+  利用LSTM捕捉长序列动态来识别动作。
+6. Wang et al.(Temporal segment networks: Towards good practices for deep action recognition). In: ECCV.(2016)
+提出稀疏采样和时域融合，目的是学习整个视频信息。
+
+- Models based on multiplicative interactions
+
 
 
 ### 3.Spatiotemporal Feature Learning
