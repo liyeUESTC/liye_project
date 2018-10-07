@@ -69,11 +69,12 @@ our work focus on **short-term temporal modeling**
 #### 3.2 SMART blocks
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/52.png)
+- SMART Block介绍
 ```
-appearance分支对位置结构建模，relation分支对时域关系建模。
-relation分支：C3D加上relation model，其中relation model用到了square-pooling，
- 以及 1* 1* 1的卷积实现的cross-channel-pooling，最后fusion，concat。
-cross-channel pooling等于对子空间做sum操作，论文中将子空间设为2（对应channel的feature map和其相邻的feature map加和），
+(1)appearance分支对位置结构建模，relation分支对时域关系建模。
+(2)relation分支：C3D + relation model
+   其中relation model用到了square-pooling，以及 1* 1* 1的卷积实现的cross-channel-pooling，最后fusion，concat。
+(3)cross-channel pooling等于对子空间做sum操作，论文中将子空间设为2（对应channel的feature map和其相邻的feature map加和），
    pooling的权重是固定的0.5
 其中Z的通道数是U的一半，而U和F通道数相同。reduction layer 的输出channel和appearance的channel一致。
 ```
