@@ -115,8 +115,23 @@ framed大小128* 170，input size112* 112* 16。
 #### 4.2 Results on the Kinetics dataset
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/54.png)
+**2D convolution、3D convolution、Relation branch、SMART block**
+```
+(1)3D卷积相比于2D卷积，在视频特征学习方面更加优秀（75.7% vs. 71.9%）
+(2)relation branch 和 SMART block表现优于3D卷积（77.2% vs. 75.7% and 77.4% vs. 75.7%）
+(3)SMART block在4种build block中表现最优。
+(4)stacking multiple SMART blocks 能够提高准确率(77.4% to 78.7)，但是stacking multiple relation blocks没有提高准确率，
+   说明了spatial structure在更高的layer中所起的作用。
+(5)stacking SMART block会增加网络深度，实验发现ARTNet-ResNet18表现优于C3D-ResNet34(78.7% vs. 77.0%),
+   说明了准确率的提升，是因为SMART block，并非网络深度的增加。
+```
 
+以下各实验均采用**ARTNet-ResNet18(d)**结构
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/55.png)
+
+```
+(1)
+```
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/56.png)
 
