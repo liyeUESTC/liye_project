@@ -114,6 +114,7 @@ framed大小128* 170，input size112* 112* 16。
 ```
 #### 4.2 Results on the Kinetics dataset
 
+- Study on building block & Study on block stacking
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/54.png)
 
 **四种基本结构：2D convolution、3D convolution、Relation branch、SMART block**
@@ -128,14 +129,26 @@ framed大小128* 170，input size112* 112* 16。
 ```
  **以下各实验均采用ARTNet-ResNet18(d)结构**
 
+- Study on two-stream inputs
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/55.png)
 
 ```
-(1)
+(1)two-stream输入C3D-ResNet18相比于RGB，准确率从75.7%提高到78.2%，说明flow stream能够提供互补的信息。
+(2)C3D-ResNet18和RGB-stream ARTNet-ResNet18相比，ARTNet表现更优(78.2% to 78.7%),说明SMART block的优越性。
+(3)ARTNet-ResNet18利用two-stream作为输入，能够提高准确率到80.4%，但光流的复杂计算量使得它很难应用到大的数据集
+   以及现实世界的应用。
+```
+**以下实验主要比较RGB作为输入的性能**
+
+- Study on long-term modeling
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/56.png)
+```
+(1)RGB作为输入，使用TSN结构，准确率可以提高1.3%(78.7% to 80.0%)
+(2)双流作为输入，使用TSN结构，准确率可以提到1.0%(80.4% to 81.4%)
+(3)ARTNet是一个通用的段视频模型，它可以用于任何的长视频学习框架，例如LSTM和attention modeling。
 ```
 
-![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/56.png)
-
+- Comparison to the state of the art
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/57.png)
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/58.png)
