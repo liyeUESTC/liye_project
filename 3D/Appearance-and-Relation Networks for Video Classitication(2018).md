@@ -150,8 +150,20 @@ framed大小128* 170，input size112* 112* 16。
 
 - Comparison to the state of the art
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/57.png)
+```
+(1)比对条件：仅使用RGB作为输入，同时从0开始训练kinetics数据集。
+(2)同等条件下，ARTNet with TSN网络可以达到最高的准确率。
+(3)two-stream I3D可以达到82.7%，但计算量大，而且使用了imagenet的预训练模型。
+```
+#### 4.2 Results on the UCF101 and HMDB51 datasets
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/58.png)
+
+```
+(1)ARTNet优于C3D,在UCF101上超过3.7%,在HMDB51上超过5.5%，说明迁移学习中，ARTNet的学习能力更强。
+(2)ARTNet-ResNet18使用tsn结构，在ucf101和hmdb51上都取得了很高的准确率，说明了长时间模型的重要性。
+(3)采用kinetics数据集预训练的模型要比在imagenet和sport1m预训练的模型效果好，说明了kinetics数据集的质量高。
+```
 
 
 ### 5.Conclusion and Future Work
