@@ -126,7 +126,7 @@ framed大小128* 170，input size112* 112* 16。
    说明了准确率的提升，是因为SMART block，并非网络深度的增加。
 ```
 
-以下各实验均采用**ARTNet-ResNet18(d)**结构
+以下各实验均采用**ARTNet-ResNet18(d)** 结构
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/55.png)
 
 ```
