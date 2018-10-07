@@ -125,8 +125,8 @@ framed大小128* 170，input size112* 112* 16。
 (5)stacking SMART block会增加网络深度，实验发现ARTNet-ResNet18表现优于C3D-ResNet34(78.7% vs. 77.0%),
    说明了准确率的提升，是因为SMART block，并非网络深度的增加。
 ```
+<font color=#00ffff size=3>以下各实验均采用ARTNet-ResNet18(d)结构</font>
 
-以下各实验均采用**ARTNet-ResNet18(d)** 结构
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/55.png)
 
 ```
