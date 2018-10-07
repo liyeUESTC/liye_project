@@ -116,7 +116,7 @@ framed大小128* 170，input size112* 112* 16。
 
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/54.png)
 
-**2D convolution、3D convolution、Relation branch、SMART block**
+**四种基本结构：2D convolution、3D convolution、Relation branch、SMART block**
 ```
 (1)3D卷积相比于2D卷积，在视频特征学习方面更加优秀（75.7% vs. 71.9%）
 (2)relation branch 和 SMART block表现优于3D卷积（77.2% vs. 75.7% and 77.4% vs. 75.7%）
