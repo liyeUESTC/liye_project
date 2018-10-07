@@ -94,6 +94,7 @@ multiplicative interactions的操作和乘性噪声相似。
 
 #### 3.3 Examples: ARTNet-ResNet18
 
+**模型结构**
 ![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/53.png)
 
 - 三种模型结构
