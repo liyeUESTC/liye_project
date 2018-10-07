@@ -37,18 +37,18 @@
 - Deep learning for video classification
 ```
 (1)Karpathy et al.(Large-scale video classification with convolutional neural networks). In: CVPR.(2014)
-第一次利用不同的temporal-fusion策略，在sports-1m数据集上测试深度网络。
+  第一次利用不同的temporal-fusion策略，在sports-1m数据集上测试深度网络。
 (2)Simonyan et al.(Two-stream convolutional networks for action recognition in videos). In: NIPS.(2014)
-第一次提出two-stream，利用预训练好的alexnet网络和光流计算。
+  第一次提出two-stream，利用预训练好的alexnet网络和光流计算。
 (3)Tran et al.(Learning spatiotemporal features with 3D convolutional networks). In: ICCV.(2015)
-提出3D网络，用于大规模视频数据集，同时将3D卷积用于ResNet。
+  提出3D网络，用于大规模视频数据集，同时将3D卷积用于ResNet。
 (4)Carreira et al.(Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset). In: CVPR.(2018)
-提出了新的Two-Stream Inflated 3D CNNs网络，能够接收在Imagenet的预训练模型。
+  提出了新的Two-Stream Inflated 3D CNNs网络，能够接收在Imagenet的预训练模型。
 (5)Ng et al.(Beyond short snippets: Deep networks for video classification). In: CVPR.(2015)
   和Donahue et al.(Long-term recurrent convolutional networks for visual recognition and description). In: CVPR.(2015)
   利用LSTM捕捉长序列动态来识别动作。
 (6)Wang et al.(Temporal segment networks: Towards good practices for deep action recognition). In: ECCV.(2016)
-提出稀疏采样和时域融合，目的是学习整个视频信息。
+  提出稀疏采样和时域融合，目的是学习整个视频信息。
 ```
 - Models based on multiplicative interactions
 
