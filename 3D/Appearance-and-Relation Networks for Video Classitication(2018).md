@@ -1,5 +1,9 @@
-## Appearance-and-Relation Network for Video Classification(2018)
+## Appearance-and-Relation Network for Video Classification(CVPR.2018)
+**Limin Wang1,2 Wei Li3 Wen Li2 Luc Van Gool2**
 
+**1State Key Laboratory for Novel Software Technology, Nanjing University, China**
+
+**2Computer Vision Laboratory, ETH Zurich, Switzerland 3Google Research**
 ### Abstract
 ```
 (1)主要工作是在3D卷积的基础上，提升了action recognition的准确率，没有使用光流信息，因为光流的提取速度特别慢，这可能是未来的研究趋势。
