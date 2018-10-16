@@ -36,6 +36,7 @@ RNN
 ### 2 Related work
 
 - Video-based persion reID(RNN based & temporal attention based)
+```
 (1)McLanghlin et al. 第一次提出了通过RNN来提取frams间的时间信息，RNN cell输出的平均作为clip level表示。
 (2)Yan et al. 利用RNN编码系列特征，final hidden state作为video的表示。
 (3)Liu et al. 设计Quality Aware Network(QAN), 是一种attention weighted average,
@@ -43,7 +44,13 @@ RNN
 (4)Zhou et al. & Xu et al. 提出利用temporal attention和RNN编码视频。
 (5)Chung et al. 提出基于RGB和flow的双流网络，简单的用temporal pooling聚集特征。
 (6)Zheng et al. 建立的新的MARS数据集，用于基于视频的行人重识别，成为了该test的标准benchmark.
-
+```
+- Image-based person reID(image spatial modeling & loss function for metric learning)
+```
+(1)Su et al. & Zhao et al. 利用人体关节解析图片，进而融合空间特征
+(2)Zhao et al. 提出了用于处理身体部分错误问题的部分对齐表示方法。
+(3)Hermans et al. 提出了修改的triple loss，能够达到目前最好的效果。
+```
 
 
 ### 3 Methods
