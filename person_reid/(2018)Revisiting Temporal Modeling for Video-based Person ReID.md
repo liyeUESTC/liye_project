@@ -84,6 +84,8 @@ RNN
 论文采用了标准残差模型作为image level特征提取器。针对n帧clip，分别输入每一帧的image，得到n个特征向量，即n * D矩阵，n是clip的长度，D是image level feature维度。然后利用temporal aggregation方法进行特征聚集，得到clip level的特征fc.
 
 特别地，论文测试了三种不同的temporal modeling方法：
+
+
 (1)temporal pooling
 
 max pooling <a href="https://www.codecogs.com/eqnedit.php?latex=f_{c}=max_{t}(f_{c}^{t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_{c}=max_{t}(f_{c}^{t})" title="f_{c}=max_{t}(f_{c}^{t})" /></a>
@@ -91,6 +93,13 @@ max pooling <a href="https://www.codecogs.com/eqnedit.php?latex=f_{c}=max_{t}(f_
 average pooling <a href="https://www.codecogs.com/eqnedit.php?latex=f_{c}=\frac{1}{T}\sum_{t=1}^{n}f_{c}^{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_{c}=\frac{1}{T}\sum_{t=1}^{n}f_{c}^{t}" title="f_{c}=\frac{1}{T}\sum_{t=1}^{n}f_{c}^{t}" /></a>
 
 (2)temporal attention
+通过网络计算得到n个feature map的重要系数。
+
+"spatial conv + FC": 
+input(T,w,h,2048) -> spatial conv(w,h,2048,dt) -> FC(input:dt,output1) -> output(T,1)
+
+"spatial + temporal conv" (存在问题？)
+input(T,w,h,2048) -> spatial conv(w,h,2048,dt) -> temporal conv(3,dt,1) -> s_c^t -> 
 
 (3)RNN
 
@@ -105,6 +114,11 @@ average pooling <a href="https://www.codecogs.com/eqnedit.php?latex=f_{c}=\frac{
 
 
 #### 3.2 Loss Functions
+
+triplet loss function + softmax cross-entropy loss function
+
+
+
 
 
 #### 3.3 Similarity Calculation for Testing
