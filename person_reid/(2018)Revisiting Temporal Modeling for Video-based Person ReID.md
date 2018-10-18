@@ -9,6 +9,10 @@
 (3)loss函数
 
 论文中比较了四种方法：
+
+![](https://github.com/liyeUESTC/liye_project/blob/file_paper/images/71.png)
+
+
 temporal pooling
 temporal attention
 RNN
