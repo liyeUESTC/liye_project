@@ -131,5 +131,43 @@ softmax cross-entropy loss function
 
 
 
-### 
+### 4 Evaluation
+
+
+#### 4.1 Evaluation Settings
+
+- Metric.
+标准评估矩阵
+
+- Dataset.
+MARS数据集
+
+- Implementations.
+```
+在ImageNet预训练的标准Res-Net50用于2D CNN
+在Kinectics预训练的3D Res-Net50用于3D CNN视频编码
+video frames resize 到224* 112
+用Adam优化网络
+batch size = 32,如果显存溢出，则把batch size调整到最大
+设置P=4,每个身份选取4个样本
+针对不同的模型，学习率设置为0.0001和0.0003
+```
+- Image-based baseline models
+```
+论文提供image-based baseline model用于测试temporal modeling的效率
+clip的长度设置为T=1，同时没有使用temporal modeling方法
+```
+
+#### 4.2 Experiments on MARS
+
+分别使用3D CNN,temporal pooling, temporal attention, RNN, 来讨论实验结果。
+
+#### 4.3 
+
+
+
+
+
+
+
 
