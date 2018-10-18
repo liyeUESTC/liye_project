@@ -116,6 +116,12 @@ input(T,w,h,2048) -> spatial conv(w,h,2048,dt) -> temporal conv(3,dt,1) -> s_c^t
 #### 3.2 Loss Functions
 
 triplet loss function + softmax cross-entropy loss function
+(详细介绍)
+
+batch hard triplet loss function
+
+
+softmax cross-entropy loss function
 
 
 
