@@ -162,8 +162,13 @@ clip的长度设置为T=1，同时没有使用temporal modeling方法
 
 分别使用3D CNN,temporal pooling, temporal attention, RNN, 来讨论实验结果。
 
+
+
 #### 4.3 
 
+
+
+### 5 Conclusion
 
 
 
